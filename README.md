@@ -46,7 +46,7 @@ python3 ping_devices.py
 To start monitoring devices, run:
 
 ```
-python3 ping_devices.py
+python3 device_ping.py
 ```
 
 The script will ping each device every 60 seconds, and if any device is offline, it will trigger the IFTTT event to send you an email.
@@ -58,7 +58,7 @@ Press Ctrl+C to stop the script.
 You can use `nohup` to run this script as a background process:
 
 ```
-nohup python3 /path/to/ping_devices.py &
+nohup python3 /path/to/device_ping.py &
 ```
 
 This will keep the script running even after you log out or close the terminal.
