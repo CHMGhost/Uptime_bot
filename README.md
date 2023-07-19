@@ -63,3 +63,7 @@ nohup python3 /path/to/ping_devices.py &
 
 This will keep the script running even after you log out or close the terminal.
 
+=======
+# Uptime_bot
+Simple Python script that pings a list of hostname
+>>>>>>> origin/main
