@@ -54,9 +54,9 @@ def ping_devices(devices):
     return offline_devices
 
 
-def send_notice(device, key):
+def send_notice(device):
     event_name = 'device_offline'
-    url = f"https://maker.ifttt.com/trigger/{event_name}/with/key/{key}"
+    url = f"https://maker.ifttt.com/trigger/{event_name}/with/key/REPLACE_KEY"
     payload = {'value1': device}
     requests.post(url, data=payload)
 
@@ -65,7 +65,7 @@ def main():
     devices = load_devices(config_file)
     if not devices:
         devices = prompt_devices()
-        save_devices(config_file, devices, key)
+        save_devices(config_file, devices)
 
     while True:
         try:
